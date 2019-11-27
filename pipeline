@@ -3,11 +3,11 @@ node('love')
 
 stage('Role')
 {
-sh 'sh $WORKSPACE/assumerole.sh'
+sh 'sh $WORKSPACE@scrpit/assumerole.sh'
 }
 stage('Describe')
 {
-sh 'sh $WORKSPACE/describe.sh'
+sh 'sh $WORKSPACE@scrpit/describe.sh'
 }
 stage('cleanworkspace')
 {
