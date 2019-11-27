@@ -1,21 +1,20 @@
 node('master')
 {
-
+stage('clone')
+{
+git 'https://github.com/rama2027/Session'
+}
 stage('Role')
 
 {
 
-sh 'sh $WORKSPACE@script/assumerole.sh'
+sh 'sh $WORKSPACE/assumerole.sh'
 
 }
 
 stage('Describe')
 
 {
-sh 'sh $WORKSPACE@script/describe.sh'
-}
-stage('clean')
-{
-cleanWs()
+sh 'sh $WORKSPACE/describe.sh'
 }
 }
