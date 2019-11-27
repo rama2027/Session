@@ -9,12 +9,12 @@ sh 'sh $WORKSPACE@script/assumerole.sh'
 
 }
 
-stage(Describe)
+stage('Describe')
 
 {
 sh 'sh $WORKSPACE@script/describe.sh'
 }
-stage(clean)
+stage('clean')
 {
 cleanWs()
 }
